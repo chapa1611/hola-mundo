@@ -59,3 +59,23 @@ def jugar_21():
         print("¡Perdiste! La mano del crupier es mayor.")
 
 jugar_21()
+TypeError                                 Traceback (most recent call last)
+File c:\Users\Estudiantes\Documents\hola mundo\21.py:6
+     58     else:
+     59         print("¡Perdiste! La mano del crupier es mayor.")
+---> 61 jugar_21()
+
+Input In [1], in jugar_21()
+     38 if eleccion == 'pedir':
+     39     mano_jugador.append(obtener_carta())
+---> 40     ajustar_as(mano_jugador)
+     41 else:
+     42     break
+
+Input In [1], in ajustar_as(mano)
+     11 def ajustar_as(mano):
+---> 12     while sum(mano) > 21 and 11 in mano:
+     13         mano.remove(11)
+     14         mano.append(1)
+
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
