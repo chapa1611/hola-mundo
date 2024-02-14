@@ -9,7 +9,7 @@ def valor_carta(carta):
         return int(carta)
 
 def ajustar_as(mano):
-    if sum(mano) > 21 and 11 in mano:
+    while sum(mano) > 21 and 11 in mano:
         mano.remove(11)
         mano.append(1)
 
@@ -45,4 +45,3 @@ def jugar_21():
         print("¡Perdiste! La mano del crupier es mayor.")
 
 jugar_21()
-
