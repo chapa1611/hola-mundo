@@ -10,8 +10,8 @@ def valor_carta(carta):
 
 def ajustar_as(mano):
     while sum(mano) > 21 and 11 in mano:
-       as_index = mano.index(11)
-       mano[as_index] = 1
+        as_index = mano.index(11)
+        mano[as_index] = 1
 
 def obtener_carta():
     pintas = ["picas", "treboles", "diamantes", "corazones"]
@@ -29,8 +29,10 @@ def jugar_21():
         if eleccion == 'pedir':
             mano_jugador.append(obtener_carta())
             ajustar_as([carta[0] for carta in mano_jugador])
-        else:
+        elif eleccion == 'quedar':
             break
+        else:
+            print("Opción no válida. Por favor, elige 'pedir' o 'quedar'.")
 
     while sum([carta[0] for carta in mano_crupier]) < 17:
         mano_crupier.append(obtener_carta())
@@ -49,3 +51,4 @@ def jugar_21():
         print("¡Perdiste! La mano del crupier es mayor.")
 
 jugar_21()
+    
